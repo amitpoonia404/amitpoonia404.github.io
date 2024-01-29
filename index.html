@@ -31,7 +31,7 @@
         #prompt {
             display: inline-block;
             margin-right: 5px;
-            color: #00ff00; /* Green color for the prompt */
+            color: #00ff00;
         }
 
         #cursor {
@@ -48,18 +48,28 @@
                 opacity: 0;
             }
         }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+
+            #terminal-box {
+                white-space: normal;
+            }
+        }
     </style>
 </head>
 <body>
     <div id="terminal-box">
-        <span id="prompt">root@hackstation:</span>
+        <span id="prompt">Neo@TheMatrix:</span>
         <span id="typing-container"></span>
         <span id="cursor"></span>
     </div>
 
     <script>
         var textToType = "They showed themselves, the top 1% of the 1%, the ones in control, the ones who play God without permission. And now I'm gonna take them down_";
-        var typingSpeed = 100;
+        var typingSpeed = 62;
         var typingContainer = document.getElementById("typing-container");
 
         function typeText(index) {
