@@ -1,1 +1,40 @@
-They showed themselves, the top 1% of the 1%, the ones in control, the ones who play God without permission. And now I'm gonna take them down.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacker Vibes</title>
+    <style>
+        body {
+            background-color: black;
+            color: lime;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 18px;
+            line-height: 1.5;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="typing-container"></div>
+
+    <script>
+        var textToType = "They showed themselves, the top 1% of the 1%, the ones in control, the ones who play God without permission. And now I'm gonna take them down.";
+        var typingSpeed = 100;
+        var typingContainer = document.getElementById("typing-container");
+
+        function typeText(index) {
+            if (index < textToType.length) {
+                typingContainer.innerHTML += textToType.charAt(index);
+                index++;
+                setTimeout(function () {
+                    typeText(index);
+                }, typingSpeed);
+            }
+        }
+
+        typeText(0);
+    </script>
+</body>
+</html>
+
