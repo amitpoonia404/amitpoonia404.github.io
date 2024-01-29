@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hacker Vibes</title>
+    <title>Glitch in The Matrix</title>
     <style>
         body {
             background-color: black;
@@ -12,14 +12,53 @@
             font-size: 18px;
             line-height: 1.5;
             padding: 20px;
+            overflow: hidden;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #terminal-box {
+            border: 2px solid lime;
+            padding: 20px;
+            border-radius: 10px;
+            white-space: nowrap;
+            position: relative;
+        }
+
+        #prompt {
+            display: inline-block;
+            margin-right: 5px;
+            color: #00ff00; /* Green color for the prompt */
+        }
+
+        #cursor {
+            display: inline-block;
+            width: 8px;
+            height: 16px;
+            background-color: lime;
+            animation: blink 1s infinite;
+            position: absolute;
+        }
+
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
         }
     </style>
 </head>
 <body>
-    <div id="typing-container"></div>
+    <div id="terminal-box">
+        <span id="prompt">root@hackstation:</span>
+        <span id="typing-container"></span>
+        <span id="cursor"></span>
+    </div>
 
     <script>
-        var textToType = "They showed themselves, the top 1% of the 1%, the ones in control, the ones who play God without permission. And now I'm gonna take them down.";
+        var textToType = "They showed themselves, the top 1% of the 1%, the ones in control, the ones who play God without permission. And now I'm gonna take them down_";
         var typingSpeed = 100;
         var typingContainer = document.getElementById("typing-container");
 
@@ -37,4 +76,3 @@
     </script>
 </body>
 </html>
-
